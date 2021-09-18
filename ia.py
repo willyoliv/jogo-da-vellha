@@ -71,7 +71,7 @@ def fazerContagemDePossibilidades(lista):
   if(containsX and not containsO):
     contagemPossibilidadesX += 1
     if(lista.count("X") == 3):
-      contagemPossibilidadesX += 1
+      contagemPossibilidadesX += 2
   elif(containsO and not containsX):
     contagemPossibilidadesO += 1
   elif(not containsX and not containsO and containsEspaco):
