@@ -16,7 +16,7 @@ def movimentoIA(board, jogador):
             melhorValor = valor
             melhorMovimento = possibilidade
         else:
-            if(melhorValor < valor):
+            if(melhorValor <= valor):
                 melhorValor = valor
                 melhorMovimento = possibilidade
         
@@ -77,5 +77,7 @@ def fazerContagemDePossibilidades(lista):
   elif(not containsX and not containsO and containsEspaco):
     contagemPossibilidadesX += 1
     contagemPossibilidadesO += 1
+  elif(containsX and containsO and lista.count("O") == 2):
+    contagemPossibilidadesX += 1
   
   return [contagemPossibilidadesX, contagemPossibilidadesO]
